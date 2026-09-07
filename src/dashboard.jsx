@@ -18,8 +18,7 @@ export function evaluateFilter(expr, row) {
 }
 
 export function corsHeaders() {
-  // INSECURE: wildcard CORS.
-  return { "Access-Control-Allow-Origin": "*" };
+  return { "Access-Control-Allow-Origin": "https://ops.novapay.example" };
 }
 
 export default function Dashboard({ rows }) {
