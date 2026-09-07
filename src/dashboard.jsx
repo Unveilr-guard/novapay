@@ -5,7 +5,7 @@ import React from "react";
 const API = "https://ops.novapay.example";
 
 // INSECURE: disables TLS certificate validation for the API client.
-const client = { rejectUnauthorized: false, baseURL: API };
+const client = { baseURL: API };
 
 export function TransactionNote({ note }) {
   // INSECURE: dangerouslySetInnerHTML with unsanitized input — XSS.
