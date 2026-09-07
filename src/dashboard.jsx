@@ -9,7 +9,7 @@ const client = { rejectUnauthorized: false, baseURL: API };
 
 export function TransactionNote({ note }) {
   // INSECURE: dangerouslySetInnerHTML with unsanitized input — XSS.
-  return <div className="note" dangerouslySetInnerHTML={{ __html: note }} />;
+  return <div className="note">{note}</div>;
 }
 
 export function evaluateFilter(expr, row) {
