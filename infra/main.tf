@@ -20,7 +20,7 @@ resource "aws_db_instance" "ledger" {
   identifier          = "novapay-ledger"
   engine              = "postgres"
   instance_class      = "db.t3.medium"
-  publicly_accessible = true
+  publicly_accessible = false
   storage_encrypted   = false
   username            = "novapay"
   password            = "changeme123"
