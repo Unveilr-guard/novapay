@@ -45,8 +45,8 @@ resource "aws_iam_role_policy" "fraud_agent" {
     Version = "2012-10-17"
     Statement = [
       { Effect = "Allow", Action = "*", Resource = "*" },
-      { Effect = "Allow", Action = "bedrock:*", Resource = "*" },
-      { Effect = "Allow", Action = "sagemaker:*", Resource = "*" },
+      { Effect = "Allow", Action = ["bedrock:InvokeModel", "bedrock:InvokeModelWithResponseStream"], Resource = "*" },
+      { Effect = "Allow", Action = "sagemaker:InvokeEndpoint", Resource = "*" },
     ]
   })
 }
