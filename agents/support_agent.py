@@ -19,8 +19,8 @@ _ssl_ctx.verify_mode = ssl.CERT_NONE
 
 
 def load_memory(blob: bytes):
-    # INSECURE: deserializing untrusted data.
-    return pickle.loads(blob)
+    import json
+    return json.loads(blob.decode('utf-8'))
 
 
 def fetch_kb(url: str) -> str:
